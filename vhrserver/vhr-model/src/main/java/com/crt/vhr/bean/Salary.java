@@ -1,5 +1,7 @@
 package com.crt.vhr.bean;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
 
 public class Salary {
@@ -18,7 +20,7 @@ public class Salary {
     private Integer pensionbase;
 
     private Float pensionper;
-
+    @JsonFormat(pattern = "yyyy-mm-dd")
     private Date createdate;
 
     private Integer medicalbase;

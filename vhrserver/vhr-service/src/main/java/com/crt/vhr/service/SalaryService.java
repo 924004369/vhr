@@ -5,6 +5,7 @@ import com.crt.vhr.mapper.SalaryMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -19,5 +20,14 @@ public class SalaryService {
 
     public List<Salary> getAllSalarys() {
         return salaryMapper.getAllSalarys();
+    }
+
+    public int addSalary(Salary salary) {
+        salary.setCreatedate(new Date());
+        return salaryMapper.insertSelective(salary);
+    }
+
+    public int del(int id) {
+        return salaryMapper.deleteByPrimaryKey(id);
     }
 }
