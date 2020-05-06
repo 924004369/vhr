@@ -20,7 +20,7 @@ public class Salary {
     private Integer pensionbase;
 
     private Float pensionper;
-    @JsonFormat(pattern = "yyyy-mm-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date createdate;
 
     private Integer medicalbase;

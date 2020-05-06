@@ -30,4 +30,8 @@ public class SalaryService {
     public int del(int id) {
         return salaryMapper.deleteByPrimaryKey(id);
     }
+
+    public int updateSalary(Salary salary) {
+        return salaryMapper.updateByPrimaryKeySelective(salary);
+    }
 }

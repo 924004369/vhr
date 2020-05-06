@@ -39,4 +39,12 @@ public class SalaryController {
         }
         return RespBean.error("删除失败");
     }
+
+    @PutMapping("/")
+    public RespBean updateSalary(@RequestBody Salary salary){
+        if (salaryService.updateSalary(salary)==1){
+            return RespBean.ok("更新成功");
+        }
+        return RespBean.error("更新失败");
+    }
 }
